@@ -23,6 +23,14 @@ const WELCOME_MESSAGE: Message = {
     "Paris 1889, la Renaissance de Florence, ou l'ère des dinosaures vous tentent-ils ?",
 }
 
+/**
+ * @component ChatWidget
+ * @description Floating AI chat widget connected to /api/chat with suggestions, async replies, and auto-scroll.
+ * @state isOpen, messages, input, isLoading, showSuggestions
+ * @sideeffects Listens for the window event open-chat and keeps focus/scroll synchronized while chatting.
+ * @example
+ * <ChatWidget />
+ */
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([WELCOME_MESSAGE])

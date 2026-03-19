@@ -28,6 +28,14 @@ function FooterTrain() {
   )
 }
 
+/**
+ * @component Footer
+ * @description Global site footer with destination, train, legal navigation, and animated train strip.
+ * @props None
+ * @sideeffects No React side effects; renders static link groups and decorative animation hooks via CSS.
+ * @example
+ * <Footer />
+ */
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-secondary/30 pt-24">

@@ -25,6 +25,14 @@ const thumbnails = [
 const blurDataURL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMCwsLCgwMDQ4PEAwODxMODAwQEhQRFRYXFxcOERkbGRYaFBb/2wBDAQMEBAUEBQkFBQkWDQsNFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhb/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAcI/8QAIRAAAgEEAgIDAAAAAAAAAAAAAQIDAAQFEQYhEjEHQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECAAMRIf/aAAwDAQACEQMRAD8AuPIOZcfxOGa8yN7Db2iKWZpWCqoA2ST/AH0KxPyD8kcV5JzC/wAfhbuO8tbeUxieJtyMB7BPrZPYOiCKKUoQoYTqyVF5If/Z"
 
+/**
+ * @component Gallery
+ * @description Renders video and image previews of destinations with hover states and click-to-scroll behavior.
+ * @state hoveredIndex
+ * @sideeffects Uses in-view animation triggers and scrolls users to #destinations when thumbnails are clicked.
+ * @example
+ * <Gallery />
+ */
 export function Gallery() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })

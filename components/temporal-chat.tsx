@@ -26,6 +26,14 @@ const features = [
   },
 ]
 
+/**
+ * @component TemporalChat
+ * @description Presents AI assistant benefits and a CTA that opens the floating chat widget.
+ * @state No local mutable state; uses in-view animation state from framer-motion hooks.
+ * @sideeffects Dispatches a custom open-chat window event to trigger ChatWidget opening.
+ * @example
+ * <TemporalChat />
+ */
 export function TemporalChat() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })

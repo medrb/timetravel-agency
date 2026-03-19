@@ -149,8 +149,26 @@ function FlameLandscape() {
   )
 }
 
+/**
+ * @component Hero
+ * @description Homepage hero with animated temporal silhouettes, particles, and CTA scrolling to destinations.
+ * @state currentEra plus internal animated particle/flame states in child render helpers
+ * @sideeffects Rotates displayed era on an interval and performs smooth scrolling to #destinations.
+ * @example
+ * <Hero />
+ */
 export function Hero() {
   const [currentEra, setCurrentEra] = useState(0)
+
+  const handleChooseEra = () => {
+    const section = document.getElementById("destinations")
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -244,8 +262,10 @@ export function Hero() {
                 transition={{ delay: 0.9 }}
               >
                 <Button
+                  onClick={handleChooseEra}
                   size="lg"
                   className="gold-gradient text-primary-foreground font-medium px-8 py-6 rounded-full hover:opacity-90 transition-all group text-lg"
+                  style={{ cursor: "pointer" }}
                 >
                   Choisir mon époque
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

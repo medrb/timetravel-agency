@@ -6,6 +6,14 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+/**
+ * @component Header
+ * @description Sticky top navigation with desktop/mobile menus and in-page section scrolling.
+ * @state isScrolled, isMobileMenuOpen
+ * @sideeffects Attaches a scroll listener to update header styling and handles cross-page anchor navigation.
+ * @example
+ * <Header />
+ */
 export function Header() {
   const router = useRouter()
   const pathname = usePathname()
@@ -31,6 +39,7 @@ export function Header() {
 
   const navItems = [
     { label: "Destinations", sectionId: "destinations" },
+    { label: "Mon profil", sectionId: "quiz" },
     { label: "Le Train", sectionId: "le-train" },
     { label: "Réservation", sectionId: "reservation" },
   ]

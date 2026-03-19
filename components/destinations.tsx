@@ -197,6 +197,14 @@ function DestinationCard({
   )
 }
 
+/**
+ * @component Destinations
+ * @description Displays the main destination selection section with animated cards and links to detail pages.
+ * @state Uses in-view state for section animation; each card tracks image error fallback state.
+ * @sideeffects Applies scroll anchor targeting via id="destinations" with sticky-header offset.
+ * @example
+ * <Destinations />
+ */
 export function Destinations() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -205,6 +213,7 @@ export function Destinations() {
     <section
       id="destinations"
       ref={ref}
+      style={{ scrollMarginTop: "80px" }}
       className="relative py-24 lg:py-32 overflow-hidden"
     >
       {/* Background */}

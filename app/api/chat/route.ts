@@ -1,3 +1,12 @@
+/**
+ * @file app/api/chat/route.ts
+ * @description Provides conversational temporal travel assistance using Mistral chat completion.
+ * @route POST /api/chat
+ * @body { messages: Array<{ role: 'user' | 'assistant', content: string }> }
+ * @returns { message: string, role: 'assistant' } | { error: string }
+ * @requires MISTRAL_API_KEY
+ * @model mistral-small-latest (Mistral)
+ */
 import { Mistral } from '@mistralai/mistralai'
 import { NextRequest, NextResponse } from 'next/server'
 

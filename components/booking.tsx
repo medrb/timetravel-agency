@@ -36,6 +36,14 @@ const dates = [
   "19 Avril 2024",
 ]
 
+/**
+ * @component Booking
+ * @description Renders the homepage booking wizard with four steps, pricing summary, and reservation anchor.
+ * @state currentStep, selectedDestination, selectedDate, passengers, travelClass
+ * @sideeffects Uses useInView to animate section reveal on scroll.
+ * @example
+ * <Booking />
+ */
 export function Booking() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
