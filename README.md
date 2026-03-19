@@ -108,6 +108,9 @@ TimeTravel Agency est une application web Next.js qui met en scene une agence de
 | Tool | Usage |
 |---|---|
 | GitHub Copilot | Code generation, bug fixes, refactoring |
+| Claude Sonnet 4.6 | Generation des prompts originaux |
+| Seelab et Gemini | Generation des visuels photos |
+| Pixverse | Transformation des images en videos |
 | v0.app (metadata `generator`) | Bootstrap initial / generation de base de projet |
 
 > Part of the code was generated or assisted by AI tools.
@@ -219,6 +222,9 @@ MISTRAL_API_KEY=your_mistral_api_key_here
 ```
 
 ## 10. Credits
+### Creatrice du projet
+Marie-Emily DARBON
+
 ### Ressources et fournisseurs
 | Resource | Source | Usage |
 |---|---|---|
@@ -298,12 +304,4 @@ MISTRAL_API_KEY=your_mistral_api_key_here
 | typescript | 5.7.3 | https://www.npmjs.com/package/typescript |
 
 ## 11. Licence
-Aucun fichier `LICENSE` n'est present actuellement dans le depot.
-
-Ce projet est documente comme distribue sous licence MIT par defaut:
-- utilisation, modification et redistribution autorisees
-- conservation de la notice de copyright
-- aucune garantie fournie
-
-Disclaimer projet:
-Ce projet met en scene une agence fictive (TimeTravel Agency) a des fins de demonstration/portfolio et n'offre pas de service reel de voyage temporel.
+Projet pedagogique - M2 Brand Entertaining et Content Marketing
